@@ -3,166 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Data Analytics with Tableau">
-  <title>Data Analytics Dashboard 📊</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>Tableau Dashboard Embed</title>
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f7fc;
-      color: #333;
-    }
-
-    header {
-      background-color: #1E3D58;
-      color: #fff;
-      padding: 20px 0;
-      text-align: center;
-      font-size: 2rem;
-    }
-
-    section {
-      padding: 40px 20px;
-    }
-
-    h2 {
-      color: #1E3D58;
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
     .tableau-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 30px;
-      padding: 20px;
-      border-radius: 8px;
-      background: linear-gradient(135deg, #6e7f8d, #8e9ca6);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      animation: fadeIn 2s ease-in-out;
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
     }
 
-    .tableau-embed {
+    .tableau-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      height: 600px;
-      border: none;
-    }
-
-    .cta-button {
-      display: inline-block;
-      background-color: #FFD700;
-      color: #1E3D58;
-      padding: 10px 20px;
-      font-size: 1.2rem;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
-
-    .cta-button:hover {
-      background-color: #ffcc00;
-    }
-
-    .content-box {
-      background: #ffffff;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      animation: slideUp 1s ease-out;
-    }
-
-    .category {
-      font-size: 1.5rem;
-      color: #1E3D58;
-      margin-top: 15px;
-      text-decoration: underline;
-    }
-
-    footer {
-      background-color: #1E3D58;
-      color: white;
-      padding: 15px 0;
-      text-align: center;
-      font-size: 1rem;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-
-    @keyframes slideUp {
-      from {
-        transform: translateY(20px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
+      height: 100%;
     }
   </style>
 </head>
 <body>
 
-<header>
-  Data Analytics Dashboard 📊
-</header>
+<h1>Interactive Tableau Dashboard 📊</h1>
+<p>Explore the data trends and insights with this interactive Tableau dashboard.</p>
 
-<section>
-  <div class="content-box">
-    <h2>Welcome to the Interactive Analytics Platform 🚀</h2>
-    <p>Here you'll find interactive visualizations and insights powered by Tableau. Dive deep into the data and explore trends, correlations, and key metrics in real-time!</p>
-    
-    <div class="category">Key Insights 🔍</div>
-    <p>Discover the latest data trends and analytics in this dynamic dashboard.</p>
-    
-    <div class="cta-button-container">
-      <a href="#explore" class="cta-button">Explore More Analytics 👀</a>
-    </div>
-  </div>
+<div class="tableau-container">
+  <iframe src="https://public.tableau.com/views/YourDashboardLinkHere" frameborder="0"></iframe>
+</div>
 
-  <div class="tableau-container">
-    <iframe class="tableau-embed" src="https://public.tableau.com/views/YourTableauDashboardLinkHere"></iframe>
-  </div>
+</body>
+</html>
 
-  <div class="content-box" id="explore">
-    <h2>Advanced Data Insights 🔎</h2>
-    <p>Take a closer look at various data metrics, trends, and analytics visualized in our advanced Tableau dashboards.</p>
-
-    <div class="category">Sales Performance 💼</div>
-    <p>Understand your sales team's performance across various metrics.</p>
-
-    <div class="category">Customer Behavior 👥</div>
-    <p>Analyze customer trends and behavior patterns to enhance decision-making.</p>
-
-    <div class="category">Financial Analytics 💰</div>
-    <p>Get insights into your financial performance and growth trajectory.</p>
-  </div>
-</section>
-
-<footer>
-  © 2025 Data Insights Co. | Powered by Tableau
-</footer>
-
-<script>
-  // Add a fun animation effect on page load
-  window.onload = () => {
-    const elements = document.querySelectorAll('.content-box');
-    elements.forEach((element, index) => {
-      setTimeout(() => {
-        element.style.opacity = 1;
-      }, 300 * index);
-    });
-  };
-</script>
 
 </body>
 </html>
