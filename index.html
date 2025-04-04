@@ -1,40 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tableau Dashboard Embed</title>
-  <style>
-    .tableau-container {
-      position: relative;
-      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-      height: 0;
-      overflow: hidden;
-      max-width: 100%;
-    }
-
-    .tableau-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>קבוצות כדורגל</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            text-align: right;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: right;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        td {
+            background-color: #f9f9f9;
+        }
+        .upload-container {
+            margin-top: 20px;
+        }
+        .upload-container input[type="file"] {
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
-
-<h1>Interactive Tableau Dashboard 📊</h1>
-<p>Explore the data trends and insights with this interactive Tableau dashboard.</p>
-
-<div class="tableau-container">
-  <iframe src="https://public.tableau.com/views/YourDashboardLinkHere" frameborder="0"></iframe>
-</div>
-
+    <h1>קבוצות כדורגל</h1>
+    
+    <!-- טבלה להצגת קבוצות כדורגל -->
+    <table>
+        <thead>
+            <tr>
+                <th>שם הקבוצה</th>
+                <th>ליגה</th>
+                <th>עיר</th>
+                <th>מאמן</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>הפועל תל אביב</td>
+                <td>ליגת העל</td>
+                <td>תל אביב</td>
+                <td>נועם שרף</td>
+            </tr>
+            <tr>
+                <td>מכבי חיפה</td>
+                <td>ליגת העל</td>
+                <td>חיפה</td>
+                <td>ברק בכר</td>
+            </tr>
+            <tr>
+                <td>בני יהודה</td>
+                <td>ליגת העל</td>
+                <td>תל אביב</td>
+                <td>אורן חסן</td>
+            </tr>
+            <!-- הוספת שורות נוספות אפשרית -->
+        </tbody>
+    </table>
+    
+    <!-- קטע להעלאת קובץ Tableau -->
+    <div class="upload-container">
+        <h2>העלה קובץ Tableau</h2>
+        <input type="file" id="tableauFile" accept=".csv, .tsv, .xls, .xlsx">
+        <p>בחר קובץ Tableau לצפייה או להעלאה.</p>
+    </div>
+    
+    <script>
+        // קוד JavaScript לניהול העלאת קובץ
+        document.getElementById("tableauFile").addEventListener("change", function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                alert("הקובץ שנבחר: " + file.name);
+            }
+        });
+    </script>
 </body>
 </html>
-
-
-</body>
-</html>
-file:///C:/Users/Guy/Desktop/%D7%97%D7%95%D7%9E%D7%A8%D7%99%D7%9D%20%D7%9C%D7%AA%D7%95%D7%90%D7%A8%20%D7%A1%D7%9E%D7%A1%D7%98%D7%A8%20%D7%90/%D7%95%D7%99%D7%96%D7%90%D7%95%D7%9C%D7%A6%D7%99%D7%94%20%D7%A9%D7%9C%20%D7%9E%D7%99%D7%93%D7%A2/Book1.twb
